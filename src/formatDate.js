@@ -9,7 +9,7 @@
  */
 function formatDate(date, fromFormat, toFormat) {
   // write code here
-  const fromDateArray = date.split(fromFormat[3]);
+  const fromDateArray = date.split(fromFormat[fromFormat.length - 1]);
   const toDateArray = [...fromDateArray];
 
   for (let i = 0; i < 3; i += 1) {
@@ -40,7 +40,7 @@ function formatDate(date, fromFormat, toFormat) {
     }
   }
 
-  return toDateArray.join(toFormat[3]);
+  return toDateArray.join(toFormat[toFormat.length - 1]);
 }
 
 module.exports = formatDate;
